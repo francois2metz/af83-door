@@ -1,0 +1,17 @@
+{
+  "author": "François de Metz <francois@af83.com>",
+  "name": "door",
+  "description": "Open the door in af83 office",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.4"
+  },
+  "dependencies": {
+      "express": ""
+  },
+  "devDependencies": {}
+}
