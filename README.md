@@ -10,7 +10,7 @@
 
 ### Open the door
 
-    curl -X PUT http://localhost:3000/door
+    curl -X POST http://localhost:3000/door
 
 ## License
 

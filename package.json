@@ -11,7 +11,8 @@
     "node": "~0.4"
   },
   "dependencies": {
-      "express": ""
+      "express": "",
+      "ejs": ""
   },
   "devDependencies": {}
 }

@@ -4,7 +4,13 @@ var express = require('express')
 
 var app = express.createServer();
 
-app.put('/door', function(req, res) {
+app.set('view engine', 'ejs');
+
+app.get('/', function(req, res) {
+    res.render('index');
+});
+
+app.post('/door', function(req, res) {
     door.open(function(err) {
         if (err) res.send('door error', 500);
         else res.send('door opened');
