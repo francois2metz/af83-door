@@ -1,5 +1,9 @@
 # ReST API to open the door at af83
 
+## Arduino code
+
+https://github.com/bearstech/FlyingDoor
+
 ## Install
 
     cd door
