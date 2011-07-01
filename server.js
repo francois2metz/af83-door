@@ -1,6 +1,9 @@
 var express = require('express')
   , door = require('./door')
+  , fs = require('fs')
 ;
+
+var config = JSON.parse(fs.readFileSync(__dirname +'/config.json'));
 
 var app = express.createServer();
 
@@ -11,10 +14,12 @@ app.get('/', function(req, res) {
 });
 
 app.post('/door', function(req, res) {
-    door.open(function(err) {
+    door.open(config.door, function(err) {
         if (err) res.send('door error', 500);
         else res.send('door opened');
     });
 });
 
-app.listen(3000);
+app.listen(config.api.port, function() {
+    console.log("now listening on http://127.0.0.1:%d/", config.api.port);
+});

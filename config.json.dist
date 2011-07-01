@@ -1,0 +1,10 @@
+{
+        "door" : {
+                "host" : "door.exemple.com",
+                "port": 23,
+                "timeout": 1000
+        },
+        "api": {
+                "port": 3000
+        }
+}

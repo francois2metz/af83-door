@@ -4,6 +4,7 @@
 
     cd door
     npm install
+    cp config.json.dist config.json
     node server.js
 
 ## API
