@@ -7,11 +7,20 @@
     cp config.json.dist config.json
     node server.js
 
+## Config
+
+
+* door.host: the hostname or ip of the arduino
+* door.port
+* door.timeout: time in millisecond before canceling the request
+* api.port: port of node api
+* auth_http_backend: the web service checking the identity. Must return a 200.
+
 ## API
 
 ### Open the door
 
-    curl -X POST http://localhost:3000/door
+    curl -X POST --basic --user username:pasword http://localhost:3000/door
 
 ## License
 

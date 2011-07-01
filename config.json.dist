@@ -1,10 +1,11 @@
 {
         "door" : {
-                "host" : "door.exemple.com",
+                "host" : "door.example.com",
                 "port": 23,
                 "timeout": 1000
         },
         "api": {
                 "port": 3000
-        }
+        },
+        "auth_http_backend": "http://example.com"
 }
