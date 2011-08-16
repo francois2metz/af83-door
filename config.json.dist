@@ -7,5 +7,6 @@
         "api": {
                 "port": 3000
         },
+        "auth_log": "auth.log",
         "auth_http_backend": "http://example.com"
 }

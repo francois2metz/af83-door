@@ -1,9 +1,13 @@
 var express = require('express')
   , door = require('./door')
   , fs = require('fs')
+  , Log = require('log')
 ;
 
 var config = JSON.parse(fs.readFileSync(__dirname +'/config.json'));
+
+// create logger
+var log = new Log(Log.INFO, fs.createWriteStream(config.auth_log));
 
 var app = express.createServer();
 
@@ -21,10 +25,14 @@ app.use(function(req, res, next) {
     if (!authorization) {
         return needAuthentication();
     } else {
+        var username = new Buffer(authorization.split(" ")[1], "base64").toString("utf8").split(":")[0];
+        log.info("trying to log with username: "+ username);
         require('./http_auth_backend')(config, authorization, function(err, result) {
             if (err || !result) {
+                log.error("access denied for username: "+ username);
                 return needAuthentication();
             } else {
+                log.info("access granted for username: "+ username);
                 next();
             }
         });

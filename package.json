@@ -13,7 +13,8 @@
   "dependencies": {
       "express": "",
       "ejs": "",
-      "request": ""
+      "request": "",
+      "log": ""
   },
   "devDependencies": {}
 }

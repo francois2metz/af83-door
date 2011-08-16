@@ -18,6 +18,7 @@ https://github.com/bearstech/FlyingDoor
 * door.port
 * door.timeout: time in millisecond before canceling the request
 * api.port: port of node api
+* auth_log: path to auth log file
 * auth_http_backend: the web service checking the identity. Must return a 200.
 
 ## API
